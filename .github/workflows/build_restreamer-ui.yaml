@@ -8,7 +8,8 @@ on:
 
 jobs:
   docker:
-    runs-on: [self-hosted]
+    # runs-on: [self-hosted]
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -57,7 +58,7 @@ jobs:
           platforms: linux/amd64,linux/arm64,linux/arm/v7
           push: true
           tags: |
-            bigservices/bigrestreamer-ui:${{ env.RELEASE }}
-            bigservices/bigrestreamer-ui:latest
+            datarhei/restreamer-ui:${{ env.RELEASE }}
+            datarhei/restreamer-ui:latest
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new
