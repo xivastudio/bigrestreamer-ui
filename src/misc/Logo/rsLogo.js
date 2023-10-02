@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Logo(props) {
 	const classes = useStyles();
 
-	let link = 'https://github.com/xpto/bigrestreamer';
+	let link = 'https://bigrestreamer.xivastudio.org';
 
 	// eslint-disable-next-line no-useless-escape
 	return (
